@@ -18,20 +18,20 @@
 </head>
 
 <body>
-<h1>Hello dear visitor, today is <cfoutput>#dateFormat(now())#</cfoutput></h1>
+<h1>Hello dear visitor, today is <cf_todays></h1>
 <p>Here is a first image with a legend</p>
 <!---First Picture--->
-<div class="imageWrapper">
+<cf_pictWrapper legend="the band in concert">
   <img src="bandPlaying.jpg" width="200" height="133" alt="Band Playing" />
-  <p>The HD Street band in concert!</p>
+  </cf_pictWrapper>
 </div>
 <!---End first Picture--->
 <p>And here is a second image with anoter legend</p>
 <!---Second Picture--->
-<div class="imageWrapper">
+<cf_pictWrapper>
   <img src="tonyAndMatt.jpg" width="200" height="133" alt="Tony And Matt" />
-  <p>Tony congratulates Matt after Matt's stunning saxophone solo!</p>
-</div>
+ 
+</cf_pictWrapper>
 <!---End second Picture--->
 </body>
 </html>
