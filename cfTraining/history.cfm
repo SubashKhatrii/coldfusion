@@ -5,7 +5,7 @@
 
 
 
-<cfmodule template="customTags/front.cfm" title="Nepal band- history Page">
+<cf_front title="Nepal band- history Page">
 
   <div id="pageBody">
 <cfoutput >
@@ -16,4 +16,4 @@
   		
   	</cfoutput>
 </div>
-  </cfmodule>
+ </cf_front>

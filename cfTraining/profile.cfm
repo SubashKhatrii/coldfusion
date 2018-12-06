@@ -28,7 +28,7 @@
 
 <!---Continue Form processing if the aErrorMessages array is empty--->
 <cfif arrayIsEmpty(aErrorMessages) >
-	<cfquery datasource="hdStreet" >
+	<cfquery  >
 		UPDATE TBL_USERS 
 		SET
 		FLD_USERFIRSTNAME ='#form.fld_userFirstName#',
@@ -52,7 +52,7 @@
 <!---Form processing ends here--->
 
 <!---Get user to update--->
-<cfquery datasource="hdStreet" name="rsUserUpdate">
+<cfquery  name="rsUserUpdate">
 	SELECT FLD_USERID, FLD_USERFIRSTNAME, FLD_USERLASTNAME, FLD_USEREMAIL, FLD_USERPASSWORD, FLD_USERCOMMENT, FLD_USERINSTRUMENT
 	FROM TBL_USERS
 	WHERE FLD_USERID = 19
@@ -61,12 +61,12 @@
 </cfquery>
 
 <!---Get instruments to feed the form's Drop-Down list--->
-<cfquery datasource="hdStreet" name="rsInstrumentsList">
+<cfquery  name="rsInstrumentsList">
 	SELECT FLD_INSTRUMENTID, FLD_INSTRUMENTNAME
 	FROM TBL_INSTRUMENTS
 	ORDER BY FLD_INSTRUMENTNAME ASC
 </cfquery>
-<cfmodule template="customTags/front.cfm" title="Nepal band- My Profile Page">
+<cf_front title="Nepal band- My Profile Page">
 	<div id="pageBody">
 		<h1>Update your profile</h1>
 		<cfform id="frm_editUser" name="fld_editUserSubmit">

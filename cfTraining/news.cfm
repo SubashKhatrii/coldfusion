@@ -1,16 +1,16 @@
 <!---Get news years--->
-<cfquery datasource="hdStreet" name="rsNewsYears">
+<cfquery  name="rsNewsYears">
 	SELECT FLD_NEWSCREATIONDATE AS fld_newsYear
 	FROM TBL_NEWS
 	ORDER BY FLD_NEWSCREATIONDATE DESC
 	
 	
 </cfquery>
-<cfmodule template="customTags/front.cfm" title="Nepal band-News Page">
+<cf_front title="Nepal band-News Page">
   <div id="pageBody">
     <div id="calendarContent">
     	<cfif isDefined('url.newsID')>
-<cfquery datasource="hdStreet" name="rsSingleNews">
+<cfquery  name="rsSingleNews">
 	SELECT TBL_NEWS.FLD_NEWSCONTENT, TBL_NEWS.FLD_NEWSTITLE, TBL_NEWS.FLD_NEWSCREATIONDATE, TBL_USERS.FLD_USERFIRSTNAME, TBL_USERS.FLD_USERLASTNAME
 	FROM TBL_NEWS INNER JOIN TBL_USERS ON TBL_NEWS.FLD_NEWSAUTHOR = TBL_USERS.FLD_USERID
 	WHERE FLD_NEWSID = #url.newsID#
@@ -29,7 +29,7 @@
 </cfoutput>
 
 <cfelseif isDefined('url.year')>
-<cfquery datasource="hdStreet" name="rsNewsOfYear">
+<cfquery  name="rsNewsOfYear">
 	SELECT FLD_NEWSTITLE, FLD_NEWSCREATIONDATE, FLD_NEWSID
 	FROM TBL_NEWS
 	WHERE year(FLD_NEWSCREATIONDATE) = #url.year#
@@ -68,7 +68,7 @@ FLD_NEWSCREATIONDATEFLD_NEWSCREATIONDATEFLD_NEWSCREATIONDATEFLD_NEWSCREATIONDATE
     		
 
 <!---Get all news--->
-<cfquery datasource="hdStreet" name="rsAllNews">
+<cfquery  name="rsAllNews">
 	SELECT FLD_NEWSTITLE, FLD_NEWSCREATIONDATE, FLD_NEWSID
 	FROM TBL_NEWS
 	ORDER BY FLD_NEWSCREATIONDATE DESC
@@ -120,4 +120,4 @@ FLD_NEWSCREATIONDATEFLD_NEWSCREATIONDATEFLD_NEWSCREATIONDATEFLD_NEWSCREATIONDATE
       <p class="alignRight">&nbsp;</p>
 </div>
   </div>
- </cfmodule>
+</cf_front>

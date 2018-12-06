@@ -1,5 +1,5 @@
 <!---Get page content for fld_pageID = 5--->
-<cfmodule template="customTags/front.cfm" title="Nepal band- Site Mpa Page">
+<cf_front title="Nepal band- Site Mpa Page">
   <div id="pageBody">
   <!---Erase from here--->
 <h1>Site Map</h1>
@@ -20,4 +20,4 @@
     </ul>
     <!---To here--->
 </div>
- </cfmodule>
+</cf_front>

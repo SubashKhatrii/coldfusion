@@ -1,5 +1,5 @@
 <!---Get page content for fld_pageID = 6--->
-<cfmodule template="customTags/front.cfm" title="Nepal band- ContactUs Page">
+<cf_front title="Nepal band- ContactUs Page">
   <div id="pageBody">
   <!---Erase from here--->
 <h1>Contact us
@@ -17,4 +17,4 @@
 <p>(225) - 295-1234</p>
 <!---To here--->
 </div>
-  </cfmodule>
+ </cf_front>

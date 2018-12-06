@@ -1,8 +1,8 @@
 
-<cfmodule template="customTags/front.cfm" title="Nepal band- Agenda Page"> 
+<cf_front title="Nepal band- Agenda Page"> 
   <div id="pageBody">
     <div id="calendarContent">
-    	<cfquery datasource="hdStreet" name="rsCurrentEvents" >
+    	<cfquery  name="rsCurrentEvents" >
     		SELECT FLD_EVENTID, FLD_EVENTNAME, FLD_EVENTDATETIME, FLD_EVENTLOCATION, FLD_EVENTVENUE
     		FROM TBL_EVENTS
     		
@@ -63,4 +63,4 @@
 </div>
   </div>
   </cfif>
- </cfmodule>
+</cf_front>

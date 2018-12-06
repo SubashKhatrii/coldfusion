@@ -1,12 +1,12 @@
 
 	<!---Adjust event dates--->
-	<cfquery name=rs_events datasource="hdStreet" >
+	<cfquery name=rs_events  >
 		SELECT TBL_EVENTS.FLD_EVENTDATETIME, TBL_EVENTS.FLD_EVENTID
 		FROM TBL_EVENTS
 	</cfquery>
 	<cfloop query="rs_events">
 		<cfset eventDate = createDate((year(now())+1),month(#FLD_EVENTDATETIME#),day(#FLD_EVENTDATETIME#)) />
-		<cfquery datasource="hdStreet">
+		<cfquery >
 			UPDATE TBL_EVENTS
 			SET
 			FLD_EVENTDATETIME = #eventDate#

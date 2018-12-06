@@ -1,5 +1,5 @@
 <!---Get page content for fld_pageID = 3--->
-<cfmodule template="customTags/front.cfm" title="Nepal band- Play for us Page">
+<cf_front title="Nepal band- Play for us Page">
   <div id="pageBody">
   <!---Erase from here--->
 <h1>We play for you</h1>
@@ -15,4 +15,4 @@
     <p>If you are interested in hiring our band, please send an e-mail to <a href="mailto:info@hdstreetband.com">info@hdstreetband.com</a></p>
 <!---To here--->
 </div>
-  </cfmodule>
+ </cf_front>

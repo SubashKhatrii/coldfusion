@@ -3,7 +3,7 @@
 
 
 <!---Get page content--->
-<cfmodule template="customTags/front.cfm" title="Nepal band- director Page">
+<cf_front title="Nepal band- director Page">
   <div id="pageBody">
   	<cfoutput >
   		
@@ -14,4 +14,4 @@
   	</cfoutput>
   	</div>
 
-  </cfmodule>
+ </cf_front>

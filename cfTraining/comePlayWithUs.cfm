@@ -25,7 +25,7 @@
 		<cfset form.fld_userApproved = 0 />
 		<cfset form.fld_userIsActive = 0 />
 		<!--- insert data in database --->
-		<cfquery datasource="hdStreet" >
+		<cfquery  >
 			INSERT INTO TBL_USERS
 			(FLD_USERFIRSTNAME, FLD_USERLASTNAME, FLD_USEREMAIL, FLD_USERPASSWORD, FLD_USERCOMMENT, FLD_USERAPPROVED, FLD_USERISACTIVE, FLD_USERROLE, FLD_USERINSTRUMENT)
 			VALUES 
@@ -39,19 +39,19 @@
 </cfif>
 
 <!---Get page content for fld_pageID = 4--->
-<cfquery datasource="hdStreet" name="rsPage">
+<cfquery  name="rsPage">
 	SELECT FLD_PAGETITLE, FLD_PAGECONTENT
 	FROM TBL_PAGES
 	WHERE FLD_PAGEID = 4 AND FLD_PAGEISACTIVE = 1
 	
 </cfquery>
-<cfquery datasource="hdStreet" name="rsInstrumentsList">
+<cfquery  name="rsInstrumentsList">
 	SELECT FLD_INSTRUMENTID, FLD_INSTRUMENTNAME
 	FROM TBL_INSTRUMENTS
 	ORDER BY FLD_INSTRUMENTNAME ASC 
 	
 </cfquery>
-<cfmodule template="customTags/front.cfm" title="Nepal band- ComePlayWithus Page">
+<cf_front title="Nepal band- ComePlayWithus Page">
   <div id="pageBody">
   	<div id="calendarContent">
     <!---Erase from here--->
@@ -121,4 +121,4 @@
 	</div>
 	</div>
  </div>
- </cfmodule>
+</cf_front>
