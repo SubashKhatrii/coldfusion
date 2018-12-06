@@ -3,6 +3,8 @@
 <cfset this.applicationTimeout = createtimespan(0,2,0,0) />
 <cfset this.datasource='hdStreet' />
 <cfset this.customTagPaths = expandPath('/cfTraining/customTags')/>
+
+<cfset this.sessionManagement= true />
 <!---Application starts methods--->
 <cffunction name="onApllicationStart" returntype="boolean" >
 	
